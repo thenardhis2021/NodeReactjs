@@ -15,7 +15,7 @@ const JWT_SECRET =
   "hvdvay6ert72839289()aiyg8t87qt72393293883uhefiuh78ttq3ifi78272jbkj?[]]pou89ywe";
 
 const mongoUrl = 
-  "mongodb+srv://admin:admin@cluster0.annhr0c.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://reset:reset@cluster0.annhr0c.mongodb.net/?retryWrites=true&w=majority";
 
 mongoose
   .connect(mongoUrl, {
@@ -66,7 +66,7 @@ app.post("/login-user", async (req, res) => {
       return res.json({ error: "error" });
     }
   }
-  res.json({ status: "error", error: "InvAlid Password" });
+  res.json({ status: "error", error: "Invalid Password" });
 });
 
 app.post("/userData", async (req, res) => {
@@ -112,7 +112,7 @@ app.post("/forgot-password", async (req, res) => {
 
     var mailOptions = {
       from: "thenardhi2001@gmail.com",
-      to: "violy.lislianty@gmail.com",
+      to: "thenardhi2001@yahoo.com",
       subject: "Password Reset",
       text: link,
     };
